@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ohmoybox — бьюти-подписка, которую ждёшь весь месяц</title>
+<meta name="description" content="Коробка на 6 000+ ₽ за 2 690 ₽: пять продуктов видно сразу, шестой остаётся сюрпризом. Собери свою коробку за 5 вопросов и оформи подписку ohmoybox.">
+<link rel="canonical" href="https://ohmoybox.ru/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ohmoybox">
+<meta property="og:title" content="ohmoybox — бьюти-подписка, которую ждёшь весь месяц">
+<meta property="og:description" content="Коробка на 6 000+ ₽ за 2 690 ₽: пять продуктов видно сразу, шестой остаётся сюрпризом.">
+<meta property="og:image" content="/assets/box-closed.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%238B1E2D'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23FFF6F6' text-anchor='middle'%3Eo%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#8B1E2D;
+  --bordeaux:#6E1624;
+  --coral:#D1455A;
+  --porcelain:#FFF6F6;
+  --cream:#F8E2E2;
+  --blush:#F3C6C6;
+  --skin:#E7B7BA;
+  --sky:#8FD3EA;
+  --sky-dark:#4FA8C4;
+  --ink:#3A2126;
+  --muted:#9B7A80;
+  --line:rgba(139,30,45,.16);
+  --r:22px;
+  --shadow:0 24px 60px -28px rgba(110,22,36,.42);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--porcelain);
+  color:var(--ink);
+  font-family:'Manrope',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,canvas,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:'Unbounded',sans-serif;margin:0;font-weight:700;line-height:1.12;color:var(--ink)}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:108px 0}
+@media (max-width:980px){.section{padding:72px 0}}
+@media (max-width:640px){.section{padding:56px 0}}
+.bg-cream{background:var(--cream)}
+.bg-porcelain{background:var(--porcelain)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--maroon);background:#fff;border:1px solid var(--line);
+  padding:8px 16px;border-radius:999px;
+}
+.eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(209,69,90,.18)}
+.eyebrow.sky::before{background:var(--sky-dark);box-shadow:0 0 0 4px rgba(79,168,196,.2)}
+.section-head{max-width:640px;margin:0 0 48px}
+.section-head h2{font-size:clamp(28px,3.4vw,42px);margin:16px 0 14px}
+.section-head .lead{color:var(--muted);font-size:17px;line-height:1.6}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-weight:700;font-size:15px;padding:16px 28px;border-radius:999px;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--maroon);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--bordeaux);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--maroon);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--maroon);background:#fff}
+.btn[disabled]{opacity:.5;cursor:not-allowed;pointer-events:none}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:background .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;color:#fff;letter-spacing:-.01em;transition:color .3s ease}
+.logo .dot{color:var(--coral)}
+nav.main-nav{display:flex;align-items:center;gap:30px}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{font-size:14.5px;font-weight:600;color:rgba(255,255,255,.88);transition:color .3s ease}
+.nav-links a:hover{color:#fff}
+header.scrolled{background:rgba(255,246,246,.86);backdrop-filter:blur(14px);box-shadow:0 8px 30px -18px rgba(110,22,36,.3)}
+header.scrolled .logo{color:var(--maroon)}
+header.scrolled .nav-links a{color:var(--ink)}
+header.scrolled .nav-links a:hover{color:var(--maroon)}
+header.scrolled .burger span{background:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;width:26px;padding:6px;z-index:101}
+.burger span{height:2px;width:100%;background:#fff;border-radius:2px;transition:background .3s ease,transform .3s ease,opacity .3s ease}
+.mobile-panel{position:fixed;inset:0;background:var(--porcelain);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateY(-100%);transition:transform .4s ease;}
+.mobile-panel.open{transform:translateY(0)}
+.mobile-panel a{font-family:'Unbounded',sans-serif;font-size:22px;color:var(--ink)}
+.mobile-panel .btn{margin-top:10px}
+@media (max-width:860px){
+  .nav-links{display:none}
+  nav.main-nav .btn{display:none}
+  .burger{display:flex}
+}
+
+/* scroll story (hero) */
+.story{position:relative;height:320vh}
+.story-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--bordeaux)}
+.story-layer{position:absolute;inset:0;opacity:0;will-change:opacity}
+.story-layer img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+.story-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(42,8,16,.62) 0%,rgba(42,8,16,.28) 38%,rgba(42,8,16,.3) 62%,rgba(42,8,16,.62) 100%);
+}
+.story-text-stack{position:absolute;inset:0;z-index:3;display:flex;align-items:center}
+.story-text{position:absolute;inset:0;display:flex;align-items:center;opacity:0;pointer-events:none;transition:opacity .05s linear}
+.story-text.active{pointer-events:auto}
+.story-text .wrap{width:100%}
+.story-text .inner{max-width:560px}
+.story-text .eyebrow{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff}
+.story-text .eyebrow::before{background:var(--coral)}
+.story-text h1,.story-text h2{color:#fff;font-size:clamp(34px,5vw,56px);margin:20px 0 16px}
+.story-text h1 .accent{color:var(--coral);font-style:italic;text-shadow:0 0 30px rgba(209,69,90,.85);filter:brightness(1.35) saturate(1.1)}
+.story-text p{color:rgba(255,246,246,.85);font-size:17px;line-height:1.65;max-width:480px}
+.story-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:30px}
+.story-text .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+.story-text .btn-ghost:hover{background:rgba(143,211,234,.16);border-color:var(--sky)}
+.story-badge{display:inline-flex;align-items:center;gap:7px;background:var(--sky);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;color:var(--bordeaux);margin-top:30px;box-shadow:0 10px 24px -10px rgba(79,168,196,.6)}
+.story-progress{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:4}
+.story-progress span{width:26px;height:3px;border-radius:3px;background:rgba(255,255,255,.3);transition:background .2s ease}
+.story-progress span.active{background:var(--coral)}
+@media (max-width:760px){.story{height:280vh}.story-text p{max-width:100%}}
+@media (prefers-reduced-motion:reduce){
+  .story{height:auto}
+  .story-sticky{position:relative;height:auto;display:grid;grid-template-rows:repeat(3,88vh);grid-template-columns:1fr}
+  .story-layer{position:relative;opacity:1;grid-column:1}
+  .story-layer[data-phase="0"]{grid-row:1}
+  .story-layer[data-phase="1"]{grid-row:2}
+  .story-layer[data-phase="2"]{grid-row:3}
+  .story-scrim{display:none}
+  .story-text-stack{display:contents}
+  .story-text{position:relative;opacity:1;pointer-events:auto;grid-column:1}
+  .story-text[data-phase="0"]{grid-row:1}
+  .story-text[data-phase="1"]{grid-row:2}
+  .story-text[data-phase="2"]{grid-row:3}
+  .story-text::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(42,8,16,.62),rgba(42,8,16,.3) 45%,rgba(42,8,16,.62))}
+  .story-progress{display:none}
+}
+
+/* reusable photo frame */
+.photo-frame{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* value / benefits */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.value-card{padding:34px 30px;background:#fff;border-radius:var(--r);box-shadow:var(--shadow)}
+.value-card h3{font-size:19px;margin-bottom:10px}
+.value-card p{color:var(--muted);font-size:15px;line-height:1.6}
+@media (max-width:860px){.value-grid{grid-template-columns:1fr}}
+
+.benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:760px){.benefits-grid{grid-template-columns:1fr}}
+.benefit-card{padding:30px;background:#fff;border-radius:var(--r);box-shadow:var(--shadow);display:flex;gap:18px}
+.benefit-num{font-family:'Unbounded',sans-serif;font-size:16px;color:#fff;background:var(--coral);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.benefit-card:nth-child(2) .benefit-num{background:var(--sky-dark)}
+.benefit-card:nth-child(4) .benefit-num{background:var(--sky-dark)}
+.benefit-card h3{font-size:17.5px;margin-bottom:8px}
+.benefit-card p{color:var(--muted);font-size:14.5px;line-height:1.6}
+.about-lead{font-size:17px;line-height:1.7;color:var(--ink)}
+.about-lead strong{color:var(--maroon)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-bottom:44px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:28px}.about-photo{order:-1;max-width:380px;margin:0 auto}}
+.about-photo{aspect-ratio:1/1}
+
+/* builder */
+.builder-grid{display:flex;justify-content:center}
+.quiz{padding:30px;position:relative;max-width:560px;width:100%}
+.quiz-progress{display:flex;gap:8px;margin-bottom:22px}
+.quiz-dot{width:28px;height:4px;border-radius:4px;background:var(--line);transition:background .3s ease}
+.quiz-dot.active{background:var(--coral)}
+.quiz-dot.done{background:var(--sky-dark)}
+.quiz-step-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.quiz h3{font-size:22px;margin-bottom:6px}
+.quiz .hint{color:var(--muted);font-size:14px;margin-bottom:20px}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:380px){.quiz-options{grid-template-columns:1fr}}
+.quiz-option{
+  display:flex;align-items:center;gap:10px;padding:16px;border:1.5px solid var(--line);border-radius:16px;
+  font-weight:700;font-size:15px;transition:border-color .2s ease,background .2s ease,transform .15s ease;
+  background:var(--porcelain);
+}
+.quiz-option:hover{border-color:var(--coral);transform:translateY(-1px)}
+.quiz-option.picked{border-color:var(--sky-dark);background:#EAF7FB;box-shadow:0 6px 20px -12px rgba(79,168,196,.45)}
+.quiz-caption{margin-top:18px;font-size:13px;color:var(--muted)}
+.quiz-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.quiz-chip{display:inline-flex;align-items:center;gap:6px;background:var(--blush);color:var(--bordeaux);font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
+.quiz-chip button{color:var(--bordeaux);font-weight:800}
+.quiz-done{display:none;text-align:center;padding:20px 0}
+.quiz-done.show{display:block}
+.quiz-done .big{font-family:'Unbounded',sans-serif;font-size:24px;margin:14px 0 6px}
+.quiz-done .price{font-family:'Unbounded',sans-serif;color:var(--maroon);font-size:20px;margin-bottom:22px}
+.quiz-done .btn{width:100%}
+.quiz-step{display:none}
+.quiz-step.active{display:block}
+
+/* how it works */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+@media (max-width:860px){.how-grid{grid-template-columns:1fr}}
+.how-step .num{font-family:'Unbounded',sans-serif;font-size:42px;-webkit-text-stroke:1.5px var(--coral);color:transparent;margin-bottom:10px}
+.how-step:nth-child(2) .num{-webkit-text-stroke-color:var(--sky-dark)}
+.how-step h3{font-size:19px;margin-bottom:10px}
+.how-step p{color:var(--muted);font-size:15px;line-height:1.6}
+
+/* pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+@media (max-width:980px){.pricing-grid{grid-template-columns:1fr};max-width:460px;margin:0 auto}
+.plan{position:relative;padding:36px 30px;display:flex;flex-direction:column}
+.plan.popular{border:2px solid var(--coral);transform:translateY(-10px)}
+@media (max-width:980px){.plan.popular{transform:none}}
+.plan.giftplan{border:2px solid var(--sky-dark)}
+.plan-badge{position:absolute;top:-14px;left:30px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;letter-spacing:.04em}
+.plan-badge.sky{background:var(--sky-dark)}
+.plan.giftplan .plan-btn{border-color:var(--sky-dark);color:var(--sky-dark)}
+.plan.giftplan .plan-btn:hover{background:var(--sky-dark);color:#fff;border-color:var(--sky-dark)}
+.plan-name{font-family:'Unbounded',sans-serif;font-size:21px;margin-bottom:6px}
+.plan-tag{color:var(--muted);font-size:14px;margin-bottom:20px}
+.plan-price{display:flex;align-items:baseline;gap:6px;margin-bottom:24px}
+.plan-price .amount{font-family:'Unbounded',sans-serif;font-size:34px;color:var(--maroon)}
+.plan-price .per{color:var(--muted);font-size:14px}
+.plan-features{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:12px;flex:1}
+.plan-features li{display:flex;gap:10px;font-size:14.5px;line-height:1.4}
+.plan-features li::before{content:'✓';color:var(--coral);font-weight:800;flex-shrink:0}
+.plan .btn{width:100%}
+
+/* brands */
+.brand-grid{display:flex;flex-wrap:wrap;gap:14px}
+.brand-chip{padding:16px 26px;background:#fff;border:1px solid var(--line);border-radius:16px;font-family:'Unbounded',sans-serif;font-weight:600;font-size:15px;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease}
+.brand-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-dark)}
+.brand-chip:nth-child(3n+2){border-color:rgba(79,168,196,.35)}
+
+/* inside the box */
+.inside-banner{max-width:720px;margin:0 auto 44px;aspect-ratio:16/10}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:860px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.product-grid{grid-template-columns:1fr}}
+.product-card{padding:24px 20px;text-align:center;position:relative;overflow:hidden}
+.product-bottle{width:38px;height:54px;margin:0 auto 16px;border-radius:9px 9px 5px 5px;position:relative}
+.product-bottle::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:18px;height:9px;border-radius:3px;background:inherit;filter:brightness(.82)}
+.product-card .brand{font-family:'Unbounded',sans-serif;font-size:14px;margin-bottom:4px}
+.product-card .pname{font-size:13px;color:var(--muted);line-height:1.4}
+.product-card.surprise{background:linear-gradient(160deg,#EAF7FB,var(--sky) 220%);border-color:var(--sky-dark)}
+.product-card.surprise .product-bottle,.product-card.surprise .pname.blur-text{filter:blur(5px);opacity:.55}
+.product-card .lock-badge{font-size:26px;margin-bottom:10px}
+.product-card .surprise-label{font-family:'Unbounded',sans-serif;font-size:14px;color:var(--sky-dark);margin-bottom:4px}
+.inside-cta{text-align:center;margin-top:40px}
+
+/* gift banner */
+.gift-banner{display:grid;grid-template-columns:260px 1fr;background:var(--maroon);border-radius:var(--r);box-shadow:var(--shadow);color:#fff;overflow:hidden}
+.gift-banner-photo img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
+.gift-banner-content{padding:40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.gift-icon{width:46px;height:46px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:21px}
+.gift-banner h3{color:#fff;font-size:22px}
+.gift-banner p{color:rgba(255,246,246,.78);font-size:14.5px;line-height:1.6;max-width:480px}
+.gift-banner .btn{align-self:flex-start;margin-top:4px}
+@media (max-width:760px){.gift-banner{grid-template-columns:1fr}.gift-banner-photo img{min-height:200px}.gift-banner-content{padding:30px}.gift-banner .btn{width:100%}}
+
+/* testimonials */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:860px){.test-grid{grid-template-columns:1fr}}
+.test-card{padding:30px}
+.test-card .avatar{width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;font-family:'Unbounded',sans-serif;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:16px}
+.test-card:nth-child(2) .avatar{background:var(--sky-dark)}
+.test-card:nth-child(3) .avatar{background:var(--maroon)}
+.test-card p.quote{font-size:15px;line-height:1.65;margin-bottom:16px}
+.test-card .who{font-size:13.5px;color:var(--muted);font-weight:700}
+
+/* checkout */
+.checkout-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+@media (max-width:980px){.checkout-grid{grid-template-columns:1fr}}
+.checkout-form{padding:34px}
+.tariff-row{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.tariff-opt{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border:1.5px solid var(--line);border-radius:16px;cursor:pointer;transition:border-color .2s ease}
+.tariff-opt input{accent-color:var(--maroon);width:18px;height:18px}
+.tariff-opt.picked{border-color:var(--maroon);background:var(--cream)}
+.tariff-opt[data-val="gift"].picked{border-color:var(--sky-dark);background:#EAF7FB}
+.tariff-opt[data-val="gift"].picked .t-price{color:var(--sky-dark)}
+.tariff-opt .t-left{display:flex;align-items:center;gap:12px}
+.tariff-opt .t-name{font-weight:700;font-size:14.5px}
+.tariff-opt .t-sub{font-size:12.5px;color:var(--muted)}
+.tariff-opt .t-price{font-family:'Unbounded',sans-serif;font-size:15px;color:var(--maroon)}
+.field-group{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media (max-width:480px){.field-group{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:700;color:var(--ink)}
+.field input{padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font-size:14.5px;font-family:inherit;background:var(--porcelain);transition:border-color .2s ease}
+.field input:focus{outline:none;border-color:var(--maroon)}
+.field input.error{border-color:#c0304a}
+.field .err-msg{font-size:12px;color:#c0304a;display:none}
+.field.invalid .err-msg{display:block}
+.form-note{font-size:12px;color:var(--muted);margin:18px 0;line-height:1.5}
+.form-note strong{color:var(--bordeaux)}
+.checkout-form .btn{width:100%;margin-top:4px}
+.summary{padding:30px;position:sticky;top:110px}
+.summary h3{font-size:17px;margin-bottom:18px}
+.summary-row{display:flex;justify-content:space-between;font-size:14.5px;padding:10px 0;border-bottom:1px solid var(--line)}
+.summary-row.total{font-weight:800;font-size:16px;border-bottom:none;padding-top:16px}
+.summary-note{font-size:12.5px;color:var(--muted);margin-top:16px;line-height:1.5}
+.success-panel{display:none;text-align:center;padding:40px 20px}
+.success-panel.show{display:block}
+.success-panel .check{width:56px;height:56px;border-radius:50%;background:var(--coral);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.success-panel h3{font-size:21px;margin-bottom:10px}
+.success-panel p{color:var(--muted);font-size:14.5px;line-height:1.6}
+
+/* faq */
+.accordion{display:flex;flex-direction:column;gap:12px;max-width:760px;margin:0 auto}
+.accordion-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.accordion-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;font-weight:700;font-size:15.5px}
+.accordion-q .plus{font-size:20px;color:var(--sky-dark);font-weight:400;transition:transform .3s ease;flex-shrink:0}
+.accordion-item.open .accordion-q .plus{transform:rotate(45deg)}
+.accordion-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.accordion-a p{padding:0 24px 20px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+/* order status */
+.order-sec{background:var(--bordeaux);color:#fff}
+.order-sec .eyebrow{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff}
+.order-sec .section-head .lead{color:rgba(255,246,246,.75)}
+.order-sec h2{color:#fff}
+.order-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+@media (max-width:860px){.order-grid{grid-template-columns:1fr}}
+.pixel-wrap{background:#4a0f18;border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+#pixelCanvas{width:100%;height:auto;image-rendering:pixelated;image-rendering:crisp-edges;border-radius:10px;background:#1c0409}
+.pixel-caption{text-align:center;margin-top:14px;font-size:13px;letter-spacing:.04em;color:var(--blush);min-height:18px}
+.tracker{display:flex;flex-direction:column;gap:0}
+.tracker-step{display:flex;align-items:flex-start;gap:16px;position:relative;padding-bottom:34px}
+.tracker-step:last-child{padding-bottom:0}
+.tracker-step::before{content:'';position:absolute;left:11px;top:26px;bottom:0;width:2px;background:rgba(255,255,255,.18)}
+.tracker-step:last-child::before{display:none}
+.tracker-dot{width:24px;height:24px;border-radius:50%;border:2px solid rgba(255,255,255,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;background:var(--bordeaux);z-index:1}
+.tracker-step.done .tracker-dot{background:var(--sky-dark);border-color:var(--sky-dark)}
+.tracker-step.done::before{background:var(--sky-dark)}
+.tracker-label{font-weight:700;font-size:15px;padding-top:2px;color:rgba(255,255,255,.55)}
+.tracker-step.done .tracker-label{color:#fff}
+
+/* footer */
+footer{background:var(--maroon);color:rgba(255,246,246,.78);padding:72px 0 28px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px}
+@media (max-width:860px){.footer-top{grid-template-columns:1fr 1fr;row-gap:36px}}
+@media (max-width:520px){.footer-top{grid-template-columns:1fr}}
+footer .logo{font-size:22px}
+.footer-slogan{margin-top:14px;font-size:14px;line-height:1.6;max-width:280px;color:rgba(255,246,246,.65)}
+.footer-col h4{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px;font-family:'Unbounded',sans-serif;font-weight:600}
+.footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.footer-col a{font-size:14px;transition:color .2s ease}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:28px;border-top:1px solid rgba(255,246,246,.14);font-size:13px}
+.footer-social{display:flex;gap:14px}
+.footer-social a{width:34px;height:34px;border-radius:50%;background:rgba(255,246,246,.1);display:flex;align-items:center;justify-content:center;font-size:14px;transition:background .2s ease,transform .2s ease}
+.footer-social a:hover{background:var(--sky-dark);transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="#top" class="logo">ohmoybox<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="#inside">Что внутри</a></li>
+        <li><a href="#brands">Бренды</a></li>
+        <li><a href="#builder">Собрать коробку</a></li>
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+      <a href="#checkout" class="btn btn-primary">Оформить</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#inside">Что внутри</a>
+  <a href="#brands">Бренды</a>
+  <a href="#builder">Собрать коробку</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#faq">Вопросы</a>
+  <a href="#checkout" class="btn btn-primary">Оформить</a>
+</div>
+
+<section class="story" id="top">
+  <div class="story-sticky" id="storySticky">
+
+    <div class="story-layer" data-phase="0">
+      <img src="assets/box-closed.jpg" alt="Коробка ohmoybox с лентой" width="1280" height="853">
+    </div>
+    <div class="story-layer" data-phase="1">
+      <img src="assets/box-open-tissue.jpg" alt="Открытая коробка ohmoybox с продуктами в тишью-бумаге" width="1024" height="1280">
+    </div>
+    <div class="story-layer" data-phase="2">
+      <img src="assets/lifestyle-woman-box.jpg" alt="Девушка держит в руках коробку ohmoybox" width="1280" height="720">
+    </div>
+
+    <div class="story-scrim"></div>
+
+    <div class="story-text-stack">
+      <div class="story-text" data-phase="0">
+        <div class="wrap"><div class="inner">
+          <span class="eyebrow">Твоё ежемесячное вау</span>
+          <h1>Коробка, которую <span class="accent">ждёшь</span> весь месяц</h1>
+          <p>Каждый месяц — новая история ухода и макияжа. Собирается под тебя, а распаковка превращается в маленький праздник.</p>
+          <div class="story-ctas">
+            <a href="#pricing" class="btn btn-primary">Оформить подписку</a>
+            <a href="#inside" class="btn btn-ghost">Что внутри коробки</a>
+          </div>
+        </div></div>
+      </div>
+      <div class="story-text" data-phase="1">
+        <div class="wrap"><div class="inner">
+          <span class="eyebrow">6 продуктов внутри</span>
+          <h2>5 ты видишь сразу, шестой — сюрприз</h2>
+          <p>Косметика на 6 000+ ₽ в каждой коробке. Пять продуктов открыты сразу, а последний узнаёшь только дома.</p>
+          <span class="story-badge"><span>🔒</span> Сюрприз раскрывается при получении</span>
+        </div></div>
+      </div>
+      <div class="story-text" data-phase="2">
+        <div class="wrap"><div class="inner">
+          <span class="eyebrow">Момент открытия</span>
+          <h2>Маленький праздник каждый месяц</h2>
+          <p>Коробка приезжает, лента развязывается — и внутри тебя ждёт то, что подобрано именно для тебя.</p>
+          <div class="story-ctas">
+            <a href="#pricing" class="btn btn-primary">Оформить подписку</a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="story-progress" id="storyProgress">
+      <span class="active"></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="brands">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Внутри коробки</span>
+      <h2>Бренды, которые мы обожаем</h2>
+      <p class="lead">Корейская косметика, за которой стоит охотиться, — мы собрали её в одной коробке.</p>
+    </div>
+    <div class="brand-grid reveal">
+      <span class="brand-chip">Beauty of Joseon</span>
+      <span class="brand-chip">COSRX</span>
+      <span class="brand-chip">Anua</span>
+      <span class="brand-chip">Round Lab</span>
+      <span class="brand-chip">Numbuzin</span>
+      <span class="brand-chip">Isntree</span>
+      <span class="brand-chip">Torriden</span>
+      <span class="brand-chip">Skin1004</span>
+      <span class="brand-chip">Mixsoon</span>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:20px">
+          <span class="eyebrow">О проекте</span>
+          <h2>Зачем мы это делаем</h2>
+        </div>
+        <p class="about-lead reveal"><strong>ohmoybox</strong> — это ежемесячная коробка косметики, которая собирается под тебя и превращает уход за собой в ритуал, который ждёшь весь месяц. Не разовый подарок к празднику, а регулярное открытие новых брендов — с сюрпризом, заботой и красивой распаковкой.</p>
+      </div>
+      <div class="about-photo photo-frame reveal">
+        <img src="assets/flatlay-pink-a.jpg" alt="Продукты из коробки ohmoybox разложены рядом с коробкой" width="1254" height="1254" loading="lazy">
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-num">1</div>
+        <div><h3>Подбираем под тебя</h3><p>Пара вопросов о коже, вкусах и формате — и коробка собирается персонально, без случайного набора.</p></div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-num">2</div>
+        <div><h3>Даём пробовать</h3><p>5–7 продуктов в месяц: мини-форматы и полноразмеры, чтобы тестировать новое без риска большой покупки.</p></div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-num">3</div>
+        <div><h3>Открываем бренды</h3><p>Каждый месяц — новые марки, которые сложно найти самостоятельно. Знакомство может перерасти в любовь.</p></div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-num">4</div>
+        <div><h3>Превращаем в ритуал</h3><p>Красивая коробка, распаковка, история боксов и оценки — уход за собой становится событием, а не рутиной.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-porcelain">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 56px">
+      <h2>Три шага до предвкушения</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="num">01</div>
+        <h3>Расскажи о себе</h3>
+        <p>Пара вопросов о коже, ароматах и формате — и мы знаем, что тебе понравится.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="num">02</div>
+        <h3>Получай коробку</h3>
+        <p>Каждый месяц свежий набор косметики приезжает к двери. Бесплатная доставка.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="num">03</div>
+        <h3>Распакуй и оцени</h3>
+        <p>Открой коробку в приложении, читай гайды, ставь оценки и копи бонусы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-porcelain" id="builder">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 48px">
+      <span class="eyebrow sky">Опрос</span>
+      <h2>Собери свою коробку</h2>
+      <p class="lead">Пара вопросов о твоей коже и предпочтениях — и мы соберём коробку, которая подходит именно тебе.</p>
+    </div>
+    <div class="builder-grid">
+      <div class="quiz card reveal" id="quizCard">
+        <div class="quiz-progress" id="quizProgress"></div>
+
+        <div class="quiz-step active" data-step="1">
+          <div class="quiz-step-label">Шаг 1 из 5</div>
+          <h3>Твой тип кожи?</h3>
+          <p class="hint">Подберём уходовую базу.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="Сухая">💧 Сухая</button>
+            <button class="quiz-option" data-answer="Нормальная">🌿 Нормальная</button>
+            <button class="quiz-option" data-answer="Комбинированная">✨ Комбинированная</button>
+            <button class="quiz-option" data-answer="Жирная">☀️ Жирная</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="2">
+          <div class="quiz-step-label">Шаг 2 из 5</div>
+          <h3>Главная задача ухода?</h3>
+          <p class="hint">Добавим активную сыворотку.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="Увлажнение">💦 Увлажнение</button>
+            <button class="quiz-option" data-answer="Сияние">🌟 Сияние</button>
+            <button class="quiz-option" data-answer="Матирование">⚪ Матирование</button>
+            <button class="quiz-option" data-answer="Антивозраст">🌙 Антивозраст</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="3">
+          <div class="quiz-step-label">Шаг 3 из 5</div>
+          <h3>Любимые ароматы?</h3>
+          <p class="hint">От этого зависит текстура и запах.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="Цветочные">🌸 Цветочные</button>
+            <button class="quiz-option" data-answer="Цитрус">🍊 Цитрус</button>
+            <button class="quiz-option" data-answer="Сладкие">🍬 Сладкие</button>
+            <button class="quiz-option" data-answer="Свежие">🍃 Свежие</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="4">
+          <div class="quiz-step-label">Шаг 4 из 5</div>
+          <h3>Что тебе ближе?</h3>
+          <p class="hint">Баланс ухода и макияжа.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="Уход">🧴 Уход</button>
+            <button class="quiz-option" data-answer="Макияж">💄 Макияж</button>
+            <button class="quiz-option" data-answer="Всё сразу">🎀 Всё сразу</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="5">
+          <div class="quiz-step-label">Шаг 5 из 5</div>
+          <h3>Твоя палитра в макияже?</h3>
+          <p class="hint">Последнее средство в коробку.</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="Ягодная">🫐 Ягодная</button>
+            <button class="quiz-option" data-answer="Нюд">🤎 Нюд</button>
+            <button class="quiz-option" data-answer="Классика">💋 Классика</button>
+            <button class="quiz-option" data-answer="Тёплая">🧡 Тёплая</button>
+          </div>
+        </div>
+
+        <p class="quiz-caption">Каждый ответ уточняет состав твоей коробки →</p>
+        <div class="quiz-chips" id="quizChips"></div>
+
+        <div class="quiz-done" id="quizDoneFilled">
+          <span style="font-size:30px">🎀</span>
+          <div class="big">Коробка подобрана</div>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:6px">Учли все твои ответы — она готова к оформлению</p>
+          <div class="price">Твоя персональная коробка ohmoybox — 2 690 ₽</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
+            <a href="#checkout" class="btn btn-primary" id="goCheckoutBtn">Оформить за 2 690 ₽</a>
+            <button class="btn btn-ghost" id="resetBoxBtn">Пройти опрос заново</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="pricing">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 56px">
+      <h2>Выбери свой формат</h2>
+      <p class="lead">Одна цена, разные сценарии. Отмена в любой момент.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan card reveal">
+        <div class="plan-name">Разовая коробка</div>
+        <div class="plan-tag">Попробовать без обязательств</div>
+        <div class="plan-price"><span class="amount">2 690 ₽</span><span class="per">/ разово</span></div>
+        <ul class="plan-features">
+          <li>Одна коробка, один раз</li>
+          <li>Косметика на 6 000+ ₽ внутри</li>
+          <li>Состав под твои ответы</li>
+          <li>Бесплатная доставка</li>
+          <li>Без продления</li>
+        </ul>
+        <button class="btn btn-ghost plan-btn" data-tariff="one">Попробовать</button>
+      </div>
+      <div class="plan card popular reveal">
+        <span class="plan-badge">Популярное</span>
+        <div class="plan-name">Подписка</div>
+        <div class="plan-tag">Не пропусти ни одной коробки</div>
+        <div class="plan-price"><span class="amount">2 690 ₽</span><span class="per">/ месяц</span></div>
+        <ul class="plan-features">
+          <li>Косметика на 6 000+ ₽ каждый месяц</li>
+          <li>Состав под тебя</li>
+          <li>Подарок за первую коробку</li>
+          <li>Ранний доступ к лимиткам</li>
+          <li>Отмена в любой момент</li>
+        </ul>
+        <button class="btn btn-primary plan-btn" data-tariff="sub">Оформить подписку</button>
+      </div>
+      <div class="plan card giftplan reveal">
+        <span class="plan-badge sky">Для подарка 🎀</span>
+        <div class="plan-name">В подарок</div>
+        <div class="plan-tag">Подари бьюти-ритуал</div>
+        <div class="plan-price"><span class="amount">2 690 ₽</span><span class="per">/ коробка</span></div>
+        <ul class="plan-features">
+          <li>Один платёж — коробка другу</li>
+          <li>Косметика на 6 000+ ₽</li>
+          <li>Красивая открытка внутри</li>
+          <li>Ранний доступ к лимиткам</li>
+          <li>Без автопродления</li>
+        </ul>
+        <button class="btn btn-ghost plan-btn" data-tariff="gift">Подарить</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-porcelain" id="inside">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 48px">
+      <span class="eyebrow">Внутри коробки</span>
+      <h2>Что внутри твоей коробки</h2>
+      <p class="lead">Косметика на 6 000+ ₽ за 2 690 ₽. Пять продуктов видно сразу, шестой остаётся сюрпризом — узнаешь, когда коробка окажется у тебя.</p>
+    </div>
+    <div class="inside-banner photo-frame reveal">
+      <img src="assets/flatlay-maroon.jpg" alt="Косметика из коробки ohmoybox разложена рядом с коробкой" width="1254" height="1254" loading="lazy">
+    </div>
+    <div class="product-grid">
+      <div class="product-card card reveal">
+        <div class="product-bottle" style="background:#F3C6C6"></div>
+        <div class="brand">Beauty of Joseon</div>
+        <div class="pname">Glow Deep Serum — сыворотка с ниацинамидом</div>
+      </div>
+      <div class="product-card card reveal">
+        <div class="product-bottle" style="background:#E7C9D4"></div>
+        <div class="brand">COSRX</div>
+        <div class="pname">Advanced Snail Mucin Essence — эссенция с муцином улитки</div>
+      </div>
+      <div class="product-card card reveal">
+        <div class="product-bottle" style="background:#D9B8C8"></div>
+        <div class="brand">Anua</div>
+        <div class="pname">Heartleaf 77% Soothing Toner — успокаивающий тонер</div>
+      </div>
+      <div class="product-card card reveal">
+        <div class="product-bottle" style="background:#C0304A"></div>
+        <div class="brand">Round Lab</div>
+        <div class="pname">Birch Juice Moisturizing Cream — крем с берёзовым соком</div>
+      </div>
+      <div class="product-card card reveal">
+        <div class="product-bottle" style="background:#8B1E2D"></div>
+        <div class="brand">Numbuzin</div>
+        <div class="pname">No.3 Skin Softening Serum — сыворотка для сияния</div>
+      </div>
+      <div class="product-card card surprise reveal">
+        <div class="lock-badge">🔒</div>
+        <div class="surprise-label">Сюрприз</div>
+        <div class="product-bottle" style="background:#9B7A80"></div>
+        <div class="pname blur-text">Шестой продукт мы не покажем заранее — узнаешь его вместе с коробкой.</div>
+      </div>
+    </div>
+    <div class="inside-cta reveal">
+      <a href="#pricing" class="btn btn-primary">Оформить подписку</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="gift">
+  <div class="wrap">
+    <div class="gift-banner reveal">
+      <div class="gift-banner-photo">
+        <img src="assets/hands-unboxing.jpg" alt="Распаковка коробки ohmoybox" width="1024" height="1280" loading="lazy">
+      </div>
+      <div class="gift-banner-content">
+        <div class="gift-icon">🎁</div>
+        <h3>Подарок в твоей первой коробке</h3>
+        <p>Оформляешь подписку впервые — получаешь бонус-продукт сверху, отдельно от пяти продуктов и сюрприза. Это наш способ сказать привет.</p>
+        <a href="#pricing" class="btn btn-ghost" style="background:#fff">Оформить и получить подарок</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-porcelain">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 56px">
+      <span class="eyebrow">Отзывы бета-тестеров</span>
+      <h2>Первые впечатления</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card card reveal">
+        <div class="avatar">А</div>
+        <p class="quote">Ждала коробку как в детстве — подарка. Внутри реально мои продукты, а не случайный набор.</p>
+        <div class="who">Алина, Москва</div>
+      </div>
+      <div class="test-card card reveal">
+        <div class="avatar">К</div>
+        <p class="quote">Распаковка в приложении — отдельный кайф. Сразу понятно, как чем пользоваться.</p>
+        <div class="who">Ксения, Санкт-Петербург</div>
+      </div>
+      <div class="test-card card reveal">
+        <div class="avatar">М</div>
+        <p class="quote">Подарила подруге подписку. Теперь каждый месяц мне пишет, что пришло 🎁</p>
+        <div class="who">Мария, Казань</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="checkout">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Оформление</span>
+      <h2>Твоя коробка почти готова</h2>
+      <p class="lead">Заполни данные — и первая коробка отправится к тебе.</p>
+    </div>
+    <div class="checkout-grid">
+      <div class="checkout-form card reveal" id="checkoutFormWrap">
+        <form id="checkoutForm" novalidate>
+          <div class="tariff-row">
+            <label class="tariff-opt" data-val="one">
+              <div class="t-left"><input type="radio" name="tariff" value="one"><div><div class="t-name">Разовая коробка</div><div class="t-sub">без обязательств</div></div></div>
+              <div class="t-price">2 690 ₽</div>
+            </label>
+            <label class="tariff-opt picked" data-val="sub">
+              <div class="t-left"><input type="radio" name="tariff" value="sub" checked><div><div class="t-name">Подписка</div><div class="t-sub">каждый месяц, отмена в любой момент</div></div></div>
+              <div class="t-price">2 690 ₽</div>
+            </label>
+            <label class="tariff-opt" data-val="gift">
+              <div class="t-left"><input type="radio" name="tariff" value="gift"><div><div class="t-name">В подарок</div><div class="t-sub">одна коробка другу</div></div></div>
+              <div class="t-price">2 690 ₽</div>
+            </label>
+          </div>
+
+          <div class="field-group">
+            <div class="field full" data-field="name">
+              <label>Имя и фамилия</label>
+              <input type="text" name="name" autocomplete="name">
+              <span class="err-msg">Введите имя</span>
+            </div>
+            <div class="field" data-field="email">
+              <label>Email</label>
+              <input type="email" name="email" autocomplete="email">
+              <span class="err-msg">Проверьте email</span>
+            </div>
+            <div class="field" data-field="phone">
+              <label>Телефон</label>
+              <input type="tel" name="phone" autocomplete="tel">
+              <span class="err-msg">Введите телефон</span>
+            </div>
+            <div class="field full" data-field="address">
+              <label>Адрес доставки</label>
+              <input type="text" name="address" autocomplete="street-address">
+              <span class="err-msg">Введите адрес</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field full" data-field="card">
+              <label>Номер карты</label>
+              <input type="text" name="card" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000">
+              <span class="err-msg">Введите номер карты (16 цифр)</span>
+            </div>
+            <div class="field" data-field="exp">
+              <label>Срок (ММ/ГГ)</label>
+              <input type="text" name="exp" inputmode="numeric" maxlength="5" placeholder="ММ/ГГ">
+              <span class="err-msg">Укажите срок действия</span>
+            </div>
+            <div class="field" data-field="cvc">
+              <label>CVC</label>
+              <input type="text" name="cvc" inputmode="numeric" maxlength="3" placeholder="123">
+              <span class="err-msg">3 цифры на обороте карты</span>
+            </div>
+          </div>
+
+          <p class="form-note"><strong>⚠ Демо-оформление.</strong> Форма демонстрационная, реальные данные карт не собираются и никуда не отправляются. Для реальных платежей в РФ подключается ЮKassa / CloudPayments / Т-Касса.</p>
+
+          <button type="submit" class="btn btn-primary">Оплатить 2 690 ₽</button>
+        </form>
+
+        <div class="success-panel" id="successPanel">
+          <div class="check">✓</div>
+          <h3>Готово! Коробка едет к тебе</h3>
+          <p>Мы отправили подтверждение на почту. Первую коробку ты откроешь в приложении ohmoybox.</p>
+        </div>
+      </div>
+
+      <div class="summary card reveal">
+        <h3>Заказ</h3>
+        <div class="summary-row"><span>Подписка ohmoybox</span><span>2 690 ₽</span></div>
+        <div class="summary-row"><span>Доставка</span><span>Бесплатно</span></div>
+        <div class="summary-row"><span>Подарок за первую коробку</span><span>0 ₽</span></div>
+        <div class="summary-row total"><span>Итого</span><span>2 690 ₽</span></div>
+        <p class="summary-note">Косметика внутри — на 6 000+ ₽. Отмена подписки в один клик в приложении.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin:0 auto 48px">
+      <span class="eyebrow sky">Вопросы</span>
+      <h2>Коротко о главном</h2>
+    </div>
+    <div class="accordion reveal" id="accordion">
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Как формируется состав коробки?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>Ты отвечаешь на вопросы о типе кожи, любимых ароматах и формате (уход или макияж). По этим ответам мы подбираем средства так, чтобы коробка была именно про тебя.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Сколько стоит и что внутри?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>2 690 ₽ за коробку. Внутри — 5 средств от брендов, которые мы любим, общей ценностью от 6 000 ₽, плюс шестой продукт-сюрприз.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Можно отменить подписку?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>Да, в любой момент и в один клик в приложении — без звонков и объяснений.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Куда доставляете?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>Мы запускаемся в России и странах СНГ. Доставка по России — бесплатно.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Что за приложение?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>В приложении ты распаковываешь коробку, читаешь гайды по продуктам, ставишь оценки и копишь бонусы. Оно входит в подписку.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section order-sec" id="order">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow sky">Статус заказа</span>
+      <h2>Коробка уже в пути</h2>
+      <p class="lead">Собрали, упаковали и отправили курьера. Следи за путём своей коробки — от склада до твоей двери.</p>
+    </div>
+    <div class="order-grid">
+      <div class="reveal">
+        <div class="pixel-wrap">
+          <canvas id="pixelCanvas" width="320" height="180"></canvas>
+        </div>
+        <p class="pixel-caption" id="pixelCaption">упаковываем коробку…</p>
+      </div>
+      <div class="tracker reveal" id="tracker">
+        <div class="tracker-step done"><div class="tracker-dot">✓</div><div class="tracker-label">Коробка собрана</div></div>
+        <div class="tracker-step"><div class="tracker-dot"></div><div class="tracker-label">В пути</div></div>
+        <div class="tracker-step"><div class="tracker-dot"></div><div class="tracker-label">У двери</div></div>
+        <div class="tracker-step"><div class="tracker-dot"></div><div class="tracker-label">Доставлено — она у тебя!</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="logo">ohmoybox<span class="dot">.</span></a>
+        <p class="footer-slogan">Бьюти-подписка, которую ждёшь весь месяц. Собираем коробки под тебя и превращаем распаковку в маленький праздник.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Продукт</h4>
+        <ul>
+          <li><a href="#top">Коробка</a></li>
+          <li><a href="#inside">Что внутри</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#brands">Бренды</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="#about">О проекте</a></li>
+          <li><a href="#">Партнёрам</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Помощь</h4>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Оферта</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ohmoybox. Сделано с любовью для России и СНГ.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Telegram">✈</a>
+        <a href="#" aria-label="VK">B</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TODO перед продакшеном: вставить ID Яндекс.Метрики, виджет эквайринга (ЮKassa/CloudPayments/Т-Касса) вместо демо-формы, реальные логотипы брендов, определить реальный шестой продукт-сюрприз -->
+
+<script>
+(function(){
+  "use strict";
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- header + burger ---------- */
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+  var burger = document.getElementById('burgerBtn');
+  var mobilePanel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', function(){
+    mobilePanel.classList.toggle('open');
+  });
+  mobilePanel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mobilePanel.classList.remove('open'); });
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  if(reducedMotion){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- smooth scroll w/ header offset ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href');
+      if(id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      ev.preventDefault();
+      var y = target.getBoundingClientRect().top + window.pageYOffset - 84;
+      window.scrollTo({top:y, behavior: reducedMotion ? 'auto' : 'smooth'});
+      mobilePanel.classList.remove('open');
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.accordion-item').forEach(function(item){
+    var q = item.querySelector('.accordion-q');
+    var a = item.querySelector('.accordion-a');
+    q.addEventListener('click', function(){
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.accordion-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.accordion-a').style.maxHeight = null;
+      });
+      if(!wasOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* =========================================================
+     SCROLL STORY — pinned 3-phase crossfade hero (isolated try/catch)
+  ========================================================== */
+  (function initStory(){
+    if(reducedMotion) return;
+    try{
+      var story = document.getElementById('top');
+      var sticky = document.getElementById('storySticky');
+      if(!story || !sticky) throw new Error('story markup missing');
+
+      var layers = Array.prototype.slice.call(sticky.querySelectorAll('.story-layer'));
+      var texts = Array.prototype.slice.call(sticky.querySelectorAll('.story-text'));
+      var dots = Array.prototype.slice.call(document.querySelectorAll('#storyProgress span'));
+      var imgs = layers.map(function(l){ return l.querySelector('img'); });
+
+      function trapezoid(p,a,b,c,d){
+        if(p<=a || p>=d) return 0;
+        if(p<b) return (p-a)/(b-a);
+        if(p<=c) return 1;
+        return 1-(p-c)/(d-c);
+      }
+      var bands = [
+        function(p){ return trapezoid(p,-1,0,0.28,0.40); },
+        function(p){ return trapezoid(p,0.28,0.40,0.60,0.72); },
+        function(p){ return trapezoid(p,0.60,0.72,2,2); }
+      ];
+
+      var ticking = false;
+      function update(){
+        ticking = false;
+        var rect = story.getBoundingClientRect();
+        var scrollable = story.offsetHeight - window.innerHeight;
+        var progress = scrollable > 0 ? (-rect.top) / scrollable : 0;
+        progress = Math.max(0, Math.min(1, progress));
+
+        var activeIdx = 0, activeVal = -1;
+        for(var i=0;i<bands.length;i++){
+          var v = bands[i](progress);
+          layers[i].style.opacity = v;
+          texts[i].style.opacity = v;
+          texts[i].classList.toggle('active', v > 0.5);
+          if(imgs[i]) imgs[i].style.transform = 'scale(' + (1.06 - 0.06*v) + ')';
+          if(v > activeVal){ activeVal = v; activeIdx = i; }
+        }
+        dots.forEach(function(d,i){ d.classList.toggle('active', i===activeIdx); });
+      }
+
+      function onScroll(){
+        if(!ticking){ ticking = true; requestAnimationFrame(update); }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll);
+      update();
+    } catch(err){
+      console.warn('story scroll fallback:', err);
+    }
+  })();
+
+  /* =========================================================
+     QUIZ CONTROLLER
+  ========================================================== */
+  (function initQuiz(){
+    var steps = Array.prototype.slice.call(document.querySelectorAll('.quiz-step'));
+    var progressWrap = document.getElementById('quizProgress');
+    var chipsWrap = document.getElementById('quizChips');
+    var doneFilled = document.getElementById('quizDoneFilled');
+    var current = 0;
+    var answers = {};
+    var PRODUCT_NAMES = ['Сыворотка','Флакон с помпой','Крем в баночке','Туба','Помада'];
+
+    steps.forEach(function(_,i){
+      var dot = document.createElement('div');
+      dot.className = 'quiz-dot' + (i===0 ? ' active' : '');
+      progressWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(progressWrap.children);
+
+    function updateDots(){
+      dots.forEach(function(d,i){
+        d.classList.toggle('active', i===current);
+        d.classList.toggle('done', i < current || i < Object.keys(answers).length);
+      });
+    }
+
+    function renderChips(){
+      chipsWrap.innerHTML = '';
+      Object.keys(answers).sort(function(a,b){return a-b}).forEach(function(idx){
+        var chip = document.createElement('span');
+        chip.className = 'quiz-chip';
+        chip.innerHTML = '<span>' + PRODUCT_NAMES[idx] + '</span>';
+        var x = document.createElement('button');
+        x.textContent = '✕';
+        x.addEventListener('click', function(){
+          delete answers[idx];
+          renderChips();
+          goToStep(parseInt(idx,10));
+          doneFilled.classList.remove('show');
+          steps[parseInt(idx,10)].classList.add('active');
+          current = parseInt(idx,10);
+          updateDots();
+        });
+        chip.appendChild(x);
+        chipsWrap.appendChild(chip);
+      });
+    }
+
+    function goToStep(i){
+      steps.forEach(function(s,si){ s.classList.toggle('active', si===i); });
+    }
+
+    steps.forEach(function(step, idx){
+      step.querySelectorAll('.quiz-option').forEach(function(opt){
+        opt.addEventListener('click', function(){
+          step.querySelectorAll('.quiz-option').forEach(function(o){ o.classList.remove('picked'); });
+          opt.classList.add('picked');
+          answers[idx] = opt.getAttribute('data-answer');
+          renderChips();
+
+          setTimeout(function(){
+            if(idx < steps.length-1){
+              current = idx+1;
+              goToStep(current);
+              updateDots();
+            } else {
+              goToStep(-1);
+              doneFilled.classList.add('show');
+              updateDots();
+            }
+          }, 380);
+        });
+      });
+    });
+
+    document.getElementById('resetBoxBtn').addEventListener('click', function(){
+      answers = {};
+      renderChips();
+      doneFilled.classList.remove('show');
+      current = 0;
+      goToStep(0);
+      steps.forEach(function(s){ s.querySelectorAll('.quiz-option').forEach(function(o){o.classList.remove('picked');}); });
+      updateDots();
+    });
+
+    document.getElementById('goCheckoutBtn').addEventListener('click', function(){
+      selectTariff('sub');
+    });
+
+    updateDots();
+  })();
+
+  /* =========================================================
+     PRICING -> CHECKOUT tariff sync
+  ========================================================== */
+  var tariffMap = {one:'one', sub:'sub', gift:'gift'};
+  function selectTariff(val){
+    document.querySelectorAll('.tariff-opt').forEach(function(opt){
+      var picked = opt.getAttribute('data-val') === val;
+      opt.classList.toggle('picked', picked);
+      opt.querySelector('input').checked = picked;
+    });
+  }
+  document.querySelectorAll('.plan-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      selectTariff(tariffMap[btn.getAttribute('data-tariff')] || 'sub');
+    });
+  });
+  document.querySelectorAll('.tariff-opt').forEach(function(opt){
+    opt.addEventListener('click', function(){ selectTariff(opt.getAttribute('data-val')); });
+  });
+
+  /* =========================================================
+     CHECKOUT FORM (demo only, no network calls)
+  ========================================================== */
+  (function initCheckout(){
+    var form = document.getElementById('checkoutForm');
+    var successPanel = document.getElementById('successPanel');
+
+    function validators(){
+      return {
+        name: function(v){ return v.trim().length > 1; },
+        email: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+        phone: function(v){ return v.replace(/\D/g,'').length >= 10; },
+        address: function(v){ return v.trim().length > 4; },
+        card: function(v){ return v.replace(/\D/g,'').length === 16; },
+        exp: function(v){ return /^\d{2}\/\d{2}$/.test(v); },
+        cvc: function(v){ return /^\d{3}$/.test(v); }
+      };
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var V = validators();
+      var valid = true;
+      Object.keys(V).forEach(function(name){
+        var fieldWrap = form.querySelector('[data-field="'+name+'"]');
+        var input = form.querySelector('[name="'+name+'"]');
+        var ok = V[name](input.value || '');
+        fieldWrap.classList.toggle('invalid', !ok);
+        input.classList.toggle('error', !ok);
+        if(!ok) valid = false;
+      });
+      if(!valid) return;
+
+      form.style.display = 'none';
+      successPanel.classList.add('show');
+    });
+
+    form.querySelectorAll('input').forEach(function(input){
+      input.addEventListener('input', function(){
+        var fieldWrap = input.closest('.field');
+        fieldWrap.classList.remove('invalid');
+        input.classList.remove('error');
+      });
+    });
+  })();
+
+  /* =========================================================
+     ORDER STATUS — pixel courier (packing / transit w/ obstacle / delivered+fireworks)
+  ========================================================== */
+  (function initPixelAnim(){
+    var section = document.getElementById('order');
+    var canvas = document.getElementById('pixelCanvas');
+    var caption = document.getElementById('pixelCaption');
+    var trackerSteps = document.querySelectorAll('#tracker .tracker-step');
+    var ctx = canvas.getContext('2d');
+    var W = 160, H = 90;
+    canvas.width = W; canvas.height = H;
+
+    var PAL = {
+      bg:'#2a0810', road:'#1c0409', wall:'#4a0f18', shelf:'#6E1624',
+      skin:'#E7B7BA', hairA:'#6E1624', hairB:'#3A2126',
+      dress:'#D1455A', apron:'#F3C6C6', coat:'#8B1E2D', coatDark:'#6E1624',
+      box:'#F3C6C6', boxLine:'#8B1E2D', boxBody:'#8B1E2D',
+      star:'#F8E2E2', door:'#6E1624', crate:'#6E1624', crateLine:'#3A2126',
+      cloud:'#5c1a28', ground:'#1c0409', sky:'#8FD3EA'
+    };
+
+    function px(x,y,w,h,color){ ctx.fillStyle = color; ctx.fillRect(Math.round(x),Math.round(y),Math.max(1,w),Math.max(1,h)); }
+
+    /* generic blocky character: head + hair + torso + legs, with pose offsets */
+    function drawChar(x,y,opts){
+      opts = opts || {};
+      var skin = opts.skin || PAL.skin;
+      var hair = opts.hair || PAL.hairA;
+      var body = opts.body || PAL.dress;
+      var legOff = opts.legOff || 0;
+      var armUp = opts.armUp || 0;
+      /* legs */
+      px(x, y-8+legOff, 3, 8, body);
+      px(x+5, y-8-legOff, 3, 8, body);
+      /* torso */
+      px(x-1, y-20, 10, 13, body);
+      /* arms */
+      px(x-3, y-20-armUp, 3, 9, skin);
+      px(x+8, y-20-armUp*0.6, 3, 9, skin);
+      /* head */
+      px(x, y-29, 8, 9, skin);
+      /* hair */
+      px(x-1, y-32, 10, 5, hair);
+      px(x-1, y-30, 2, 4, hair);
+      px(x+7, y-30, 2, 4, hair);
+    }
+
+    function drawPackerScene(t){
+      px(0,0,W,H,PAL.bg);
+      px(0,H-30,W,30,PAL.road);
+      px(8,20,54,42,PAL.wall);
+      px(14,26,14,10,PAL.shelf);
+      px(32,26,14,10,PAL.shelf);
+      px(14,40,32,6,PAL.shelf);
+      var tapeWiggle = Math.sin(t*10)*2;
+      var tableX = 70, tableY = H-34;
+      px(tableX,tableY,46,4,PAL.coatDark);
+      px(tableX+4,tableY+4,38,2,PAL.coatDark);
+      drawBoxItem(tableX+10,tableY-14,0.4+Math.max(0,Math.sin(t*6))*0.1);
+      drawChar(tableX+32,tableY, {skin:PAL.skin,hair:PAL.hairB,body:PAL.apron,armUp:4+tapeWiggle});
+      px(tableX+28,tableY-26+tapeWiggle,4,3,PAL.coat);
+      for(var i=0;i<10;i++){
+        var sx=(i*41+7)%W, sy=(i*13)%16+4;
+        if((i*5)%3===0) px(sx,sy,1,1,PAL.star);
+      }
+    }
+
+    function drawTransitScene(t){
+      px(0,0,W,H,PAL.bg);
+      px(0,14,W,8,PAL.cloud);
+      px(20,12,10,6,PAL.cloud);
+      px(100,10,14,6,PAL.cloud);
+      px(0,H-18,W,18,PAL.road);
+      px(0,H-20,W,2,PAL.coatDark);
+
+      var span = W-40;
+      var courierX = 14 + span*t;
+      var obstacleX = 14 + span*0.55;
+      px(obstacleX,H-30,12,12,PAL.crate);
+      px(obstacleX+2,H-27,8,2,PAL.crateLine);
+      px(obstacleX+2,H-22,8,2,PAL.crateLine);
+
+      var jumpY = 0;
+      var distToObstacle = courierX - obstacleX;
+      if(distToObstacle > -16 && distToObstacle < 16){
+        var local = (distToObstacle+16)/32;
+        jumpY = Math.sin(local*Math.PI) * 15;
+      }
+      var run = Math.sin(t*28);
+      drawChar(courierX, H-18-jumpY, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, legOff: run*3, armUp: 2});
+      drawBoxItem(courierX-3, H-44-jumpY, 0.42);
+
+      for(var i=0;i<6;i++){
+        var cx = (courierX + i*26) % (W+20) - 10;
+        px(cx, H-24, 1, 1, PAL.star);
+      }
+    }
+
+    function drawDoorArrival(t){
+      px(0,0,W,H,PAL.bg);
+      px(0,H-24,W,24,PAL.road);
+      px(W-50,16,40,52,PAL.wall);
+      px(W-40,H-30,10,14,PAL.door);
+      px(W-30,H-24,6,6,'#F8E2E2');
+      var bob = Math.sin(t*6)*1.5;
+      drawChar(W-66, H-24, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, armUp:3});
+      drawBoxItem(W-70, H-50+bob, 0.42);
+      drawChar(W-28, H-24, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress});
+      for(var i=0;i<10;i++){
+        var sx=(i*41+7)%W, sy=(i*13)%16+4;
+        if((i*5)%3===0) px(sx,sy,1,1,PAL.star);
+      }
+    }
+
+    var fireworks = [];
+    function spawnFirework(cx,cy){
+      var colors = [PAL.dress, PAL.coat, PAL.box, PAL.star, PAL.sky, '#F8E2E2'];
+      var n = 10;
+      for(var i=0;i<n;i++){
+        var a = (i/n)*Math.PI*2;
+        fireworks.push({x:cx,y:cy,vx:Math.cos(a)*1.4,vy:Math.sin(a)*1.4,life:1,color:colors[i%colors.length]});
+      }
+    }
+    var lastBurst = 0;
+    function drawDeliveredScene(t){
+      px(0,0,W,H,PAL.bg);
+      px(0,H-24,W,24,PAL.road);
+      px(W-50,16,40,52,PAL.wall);
+      px(W-40,H-30,10,14,'#2a0810');
+      drawChar(W-66, H-24, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat});
+      drawChar(W-28, H-24, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress, armUp:5});
+      drawBoxItem(W-36, H-46, 0.42);
+
+      if(t - lastBurst > 0.55){
+        lastBurst = t;
+        var spots = [[40,30],[90,22],[65,45]];
+        var spot = spots[Math.floor(Math.random()*spots.length)];
+        spawnFirework(spot[0], spot[1]);
+      }
+      fireworks.forEach(function(p){
+        p.x += p.vx; p.y += p.vy; p.vy += 0.03; p.life -= 0.025;
+        if(p.life > 0) px(p.x, p.y, 1.5, 1.5, p.color);
+      });
+      fireworks = fireworks.filter(function(p){ return p.life > 0; });
+    }
+
+    function drawBoxItem(x,y,scale){
+      scale = scale || 1;
+      var w = 16*scale, h = 11*scale;
+      px(x,y,w,h,PAL.box);
+      px(x,y+h*0.45,w,1,PAL.boxLine);
+      px(x+w*0.45,y,1,h,PAL.boxLine);
+    }
+
+    var phases = [
+      {label:'упаковываем коробку…', tracker:0, draw:drawPackerScene},
+      {label:'курьер в пути, перепрыгивает преграды', tracker:1, draw:drawTransitScene},
+      {label:'уже у твоей двери', tracker:2, draw:drawDoorArrival},
+      {label:'доставлено — она у тебя! 🎉', tracker:3, draw:drawDeliveredScene}
+    ];
+
+    var started = false;
+    var inView = false;
+    var running = false;
+    var tStart = 0;
+    var pausedAt = 0;
+
+    function setTracker(idx){
+      trackerSteps.forEach(function(s,i){
+        s.classList.toggle('done', i<=idx);
+        var dot = s.querySelector('.tracker-dot');
+        dot.textContent = i<=idx ? '✓' : '';
+      });
+    }
+
+    function animate(now){
+      if(!inView){ running = false; pausedAt = now; return; }
+      var elapsed = (now - tStart)/1000;
+      var cycle = 14;
+      var local = elapsed % cycle;
+      var seg = cycle/4;
+      var phaseIdx = Math.min(3, Math.floor(local/seg));
+      var phaseT = (local - phaseIdx*seg)/seg;
+      caption.textContent = phases[phaseIdx].label;
+      setTracker(phases[phaseIdx].tracker);
+      phases[phaseIdx].draw(phaseT);
+      requestAnimationFrame(animate);
+    }
+
+    function startLoop(){
+      if(running) return;
+      running = true;
+      var now = performance.now();
+      if(!started){ started = true; tStart = now; }
+      else if(pausedAt){ tStart += (now - pausedAt); }
+      if(reducedMotion){ phases[0].draw(0); caption.textContent = phases[0].label; setTracker(0); running = false; }
+      else requestAnimationFrame(animate);
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        inView = e.isIntersecting;
+        if(inView) startLoop();
+      });
+    }, {threshold:.2});
+    io.observe(section);
+  })();
+
+})();
+</script>
+</body>
+</html>
