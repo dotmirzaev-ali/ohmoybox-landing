@@ -11,7 +11,7 @@
 <meta property="og:site_name" content="ohmoybox">
 <meta property="og:title" content="ohmoybox — бьюти-подписка, которую ждёшь весь месяц">
 <meta property="og:description" content="Коробка на 6 000+ ₽ за 2 690 ₽: пять продуктов видно сразу, шестой остаётся сюрпризом.">
-<meta property="og:image" content="/assets/box-closed.jpg">
+<meta property="og:image" content="/assets/box-closed-blue.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%238B1E2D'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23FFF6F6' text-anchor='middle'%3Eo%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,8 @@
   --cream:#F8E2E2;
   --blush:#F3C6C6;
   --skin:#E7B7BA;
-  --sky:#8FD3EA;
-  --sky-dark:#4FA8C4;
+  --sky:#B9CBDE;
+  --sky-dark:#49709B;
   --ink:#3A2126;
   --muted:#9B7A80;
   --line:rgba(139,30,45,.16);
@@ -61,7 +61,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   padding:8px 16px;border-radius:999px;
 }
 .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(209,69,90,.18)}
-.eyebrow.sky::before{background:var(--sky-dark);box-shadow:0 0 0 4px rgba(79,168,196,.2)}
+.eyebrow.sky::before{background:var(--sky-dark);box-shadow:0 0 0 4px rgba(73,112,155,.22)}
 .section-head{max-width:640px;margin:0 0 48px}
 .section-head h2{font-size:clamp(28px,3.4vw,42px);margin:16px 0 14px}
 .section-head .lead{color:var(--muted);font-size:17px;line-height:1.6}
@@ -130,8 +130,8 @@ header.scrolled .burger span{background:var(--ink)}
 .story-text p{color:rgba(255,246,246,.85);font-size:17px;line-height:1.65;max-width:480px}
 .story-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:30px}
 .story-text .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
-.story-text .btn-ghost:hover{background:rgba(143,211,234,.16);border-color:var(--sky)}
-.story-badge{display:inline-flex;align-items:center;gap:7px;background:var(--sky);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;color:var(--bordeaux);margin-top:30px;box-shadow:0 10px 24px -10px rgba(79,168,196,.6)}
+.story-text .btn-ghost:hover{background:rgba(185,203,222,.22);border-color:var(--sky)}
+.story-badge{display:inline-flex;align-items:center;gap:7px;background:var(--sky);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;color:var(--bordeaux);margin-top:30px;box-shadow:0 10px 24px -10px rgba(73,112,155,.5)}
 .story-progress{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:4}
 .story-progress span{width:26px;height:3px;border-radius:3px;background:rgba(255,255,255,.3);transition:background .2s ease}
 .story-progress span.active{background:var(--coral)}
@@ -178,37 +178,6 @@ header.scrolled .burger span{background:var(--ink)}
 @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:28px}.about-photo{order:-1;max-width:380px;margin:0 auto}}
 .about-photo{aspect-ratio:1/1}
 
-/* builder */
-.builder-grid{display:flex;justify-content:center}
-.quiz{padding:30px;position:relative;max-width:560px;width:100%}
-.quiz-progress{display:flex;gap:8px;margin-bottom:22px}
-.quiz-dot{width:28px;height:4px;border-radius:4px;background:var(--line);transition:background .3s ease}
-.quiz-dot.active{background:var(--coral)}
-.quiz-dot.done{background:var(--sky-dark)}
-.quiz-step-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
-.quiz h3{font-size:22px;margin-bottom:6px}
-.quiz .hint{color:var(--muted);font-size:14px;margin-bottom:20px}
-.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:380px){.quiz-options{grid-template-columns:1fr}}
-.quiz-option{
-  display:flex;align-items:center;gap:10px;padding:16px;border:1.5px solid var(--line);border-radius:16px;
-  font-weight:700;font-size:15px;transition:border-color .2s ease,background .2s ease,transform .15s ease;
-  background:var(--porcelain);
-}
-.quiz-option:hover{border-color:var(--coral);transform:translateY(-1px)}
-.quiz-option.picked{border-color:var(--sky-dark);background:#EAF7FB;box-shadow:0 6px 20px -12px rgba(79,168,196,.45)}
-.quiz-caption{margin-top:18px;font-size:13px;color:var(--muted)}
-.quiz-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.quiz-chip{display:inline-flex;align-items:center;gap:6px;background:var(--blush);color:var(--bordeaux);font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
-.quiz-chip button{color:var(--bordeaux);font-weight:800}
-.quiz-done{display:none;text-align:center;padding:20px 0}
-.quiz-done.show{display:block}
-.quiz-done .big{font-family:'Unbounded',sans-serif;font-size:24px;margin:14px 0 6px}
-.quiz-done .price{font-family:'Unbounded',sans-serif;color:var(--maroon);font-size:20px;margin-bottom:22px}
-.quiz-done .btn{width:100%}
-.quiz-step{display:none}
-.quiz-step.active{display:block}
-
 /* how it works */
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 @media (max-width:860px){.how-grid{grid-template-columns:1fr}}
@@ -242,10 +211,13 @@ header.scrolled .burger span{background:var(--ink)}
 .brand-grid{display:flex;flex-wrap:wrap;gap:14px}
 .brand-chip{padding:16px 26px;background:#fff;border:1px solid var(--line);border-radius:16px;font-family:'Unbounded',sans-serif;font-weight:600;font-size:15px;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease}
 .brand-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-dark)}
-.brand-chip:nth-child(3n+2){border-color:rgba(79,168,196,.35)}
+.brand-chip:nth-child(3n+2){border-color:rgba(73,112,155,.4)}
 
 /* inside the box */
 .inside-banner{max-width:720px;margin:0 auto 44px;aspect-ratio:16/10}
+.brand-banner{aspect-ratio:21/9}
+.brand-banner img{object-position:50% 35%}
+@media (max-width:760px){.brand-banner{aspect-ratio:4/5}}
 .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media (max-width:860px){.product-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.product-grid{grid-template-columns:1fr}}
@@ -374,7 +346,6 @@ footer .logo{font-size:22px}
       <ul class="nav-links">
         <li><a href="#inside">Что внутри</a></li>
         <li><a href="#brands">Бренды</a></li>
-        <li><a href="#builder">Собрать коробку</a></li>
         <li><a href="#pricing">Тарифы</a></li>
         <li><a href="#faq">Вопросы</a></li>
       </ul>
@@ -387,7 +358,6 @@ footer .logo{font-size:22px}
 <div class="mobile-panel" id="mobilePanel">
   <a href="#inside">Что внутри</a>
   <a href="#brands">Бренды</a>
-  <a href="#builder">Собрать коробку</a>
   <a href="#pricing">Тарифы</a>
   <a href="#faq">Вопросы</a>
   <a href="#checkout" class="btn btn-primary">Оформить</a>
@@ -397,13 +367,13 @@ footer .logo{font-size:22px}
   <div class="story-sticky" id="storySticky">
 
     <div class="story-layer" data-phase="0">
-      <img src="assets/box-closed.jpg" alt="Коробка ohmoybox с лентой" width="1280" height="853">
+      <img src="assets/hero-girl-headband.jpg" alt="Девушка держит стопку коробок ohmoybox" width="1122" height="1402">
     </div>
     <div class="story-layer" data-phase="1">
-      <img src="assets/box-open-tissue.jpg" alt="Открытая коробка ohmoybox с продуктами в тишью-бумаге" width="1024" height="1280">
+      <img src="assets/hero-box-open.jpg" alt="Открытая коробка ohmoybox с продуктами в тишью-бумаге" width="1024" height="1280">
     </div>
     <div class="story-layer" data-phase="2">
-      <img src="assets/lifestyle-woman-box.jpg" alt="Девушка держит в руках коробку ohmoybox" width="1280" height="720">
+      <img src="assets/hero-girl-winking.jpg" alt="Девушка сидит с коробками ohmoybox" width="1448" height="1086">
     </div>
 
     <div class="story-scrim"></div>
@@ -467,6 +437,14 @@ footer .logo{font-size:22px}
   </div>
 </section>
 
+<section class="section bg-porcelain" style="padding-top:0">
+  <div class="wrap">
+    <div class="brand-banner photo-frame reveal">
+      <img src="assets/brand-flatlay-blue.jpg" alt="Продукты ohmoybox крупным планом рядом с коробкой" width="1254" height="1254" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section class="section bg-cream" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -478,7 +456,7 @@ footer .logo{font-size:22px}
         <p class="about-lead reveal"><strong>ohmoybox</strong> — это ежемесячная коробка косметики, которая собирается под тебя и превращает уход за собой в ритуал, который ждёшь весь месяц. Не разовый подарок к празднику, а регулярное открытие новых брендов — с сюрпризом, заботой и красивой распаковкой.</p>
       </div>
       <div class="about-photo photo-frame reveal">
-        <img src="assets/flatlay-pink-a.jpg" alt="Продукты из коробки ohmoybox разложены рядом с коробкой" width="1254" height="1254" loading="lazy">
+        <img src="assets/about-flatlay-blue.jpg" alt="Продукты из коробки ohmoybox разложены рядом с коробкой" width="1254" height="1254" loading="lazy">
       </div>
     </div>
     <div class="benefits-grid">
@@ -522,94 +500,6 @@ footer .logo{font-size:22px}
         <div class="num">03</div>
         <h3>Распакуй и оцени</h3>
         <p>Открой коробку в приложении, читай гайды, ставь оценки и копи бонусы.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-porcelain" id="builder">
-  <div class="wrap">
-    <div class="section-head center reveal" style="margin:0 auto 48px">
-      <span class="eyebrow sky">Опрос</span>
-      <h2>Собери свою коробку</h2>
-      <p class="lead">Пара вопросов о твоей коже и предпочтениях — и мы соберём коробку, которая подходит именно тебе.</p>
-    </div>
-    <div class="builder-grid">
-      <div class="quiz card reveal" id="quizCard">
-        <div class="quiz-progress" id="quizProgress"></div>
-
-        <div class="quiz-step active" data-step="1">
-          <div class="quiz-step-label">Шаг 1 из 5</div>
-          <h3>Твой тип кожи?</h3>
-          <p class="hint">Подберём уходовую базу.</p>
-          <div class="quiz-options">
-            <button class="quiz-option" data-answer="Сухая">💧 Сухая</button>
-            <button class="quiz-option" data-answer="Нормальная">🌿 Нормальная</button>
-            <button class="quiz-option" data-answer="Комбинированная">✨ Комбинированная</button>
-            <button class="quiz-option" data-answer="Жирная">☀️ Жирная</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" data-step="2">
-          <div class="quiz-step-label">Шаг 2 из 5</div>
-          <h3>Главная задача ухода?</h3>
-          <p class="hint">Добавим активную сыворотку.</p>
-          <div class="quiz-options">
-            <button class="quiz-option" data-answer="Увлажнение">💦 Увлажнение</button>
-            <button class="quiz-option" data-answer="Сияние">🌟 Сияние</button>
-            <button class="quiz-option" data-answer="Матирование">⚪ Матирование</button>
-            <button class="quiz-option" data-answer="Антивозраст">🌙 Антивозраст</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" data-step="3">
-          <div class="quiz-step-label">Шаг 3 из 5</div>
-          <h3>Любимые ароматы?</h3>
-          <p class="hint">От этого зависит текстура и запах.</p>
-          <div class="quiz-options">
-            <button class="quiz-option" data-answer="Цветочные">🌸 Цветочные</button>
-            <button class="quiz-option" data-answer="Цитрус">🍊 Цитрус</button>
-            <button class="quiz-option" data-answer="Сладкие">🍬 Сладкие</button>
-            <button class="quiz-option" data-answer="Свежие">🍃 Свежие</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" data-step="4">
-          <div class="quiz-step-label">Шаг 4 из 5</div>
-          <h3>Что тебе ближе?</h3>
-          <p class="hint">Баланс ухода и макияжа.</p>
-          <div class="quiz-options">
-            <button class="quiz-option" data-answer="Уход">🧴 Уход</button>
-            <button class="quiz-option" data-answer="Макияж">💄 Макияж</button>
-            <button class="quiz-option" data-answer="Всё сразу">🎀 Всё сразу</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" data-step="5">
-          <div class="quiz-step-label">Шаг 5 из 5</div>
-          <h3>Твоя палитра в макияже?</h3>
-          <p class="hint">Последнее средство в коробку.</p>
-          <div class="quiz-options">
-            <button class="quiz-option" data-answer="Ягодная">🫐 Ягодная</button>
-            <button class="quiz-option" data-answer="Нюд">🤎 Нюд</button>
-            <button class="quiz-option" data-answer="Классика">💋 Классика</button>
-            <button class="quiz-option" data-answer="Тёплая">🧡 Тёплая</button>
-          </div>
-        </div>
-
-        <p class="quiz-caption">Каждый ответ уточняет состав твоей коробки →</p>
-        <div class="quiz-chips" id="quizChips"></div>
-
-        <div class="quiz-done" id="quizDoneFilled">
-          <span style="font-size:30px">🎀</span>
-          <div class="big">Коробка подобрана</div>
-          <p style="color:var(--muted);font-size:14px;margin-bottom:6px">Учли все твои ответы — она готова к оформлению</p>
-          <div class="price">Твоя персональная коробка ohmoybox — 2 690 ₽</div>
-          <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
-            <a href="#checkout" class="btn btn-primary" id="goCheckoutBtn">Оформить за 2 690 ₽</a>
-            <button class="btn btn-ghost" id="resetBoxBtn">Пройти опрос заново</button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -675,7 +565,7 @@ footer .logo{font-size:22px}
       <p class="lead">Косметика на 6 000+ ₽ за 2 690 ₽. Пять продуктов видно сразу, шестой остаётся сюрпризом — узнаешь, когда коробка окажется у тебя.</p>
     </div>
     <div class="inside-banner photo-frame reveal">
-      <img src="assets/flatlay-maroon.jpg" alt="Косметика из коробки ohmoybox разложена рядом с коробкой" width="1254" height="1254" loading="lazy">
+      <img src="assets/inside-flatlay-red.jpg" alt="Косметика из коробки ohmoybox разложена рядом с коробкой" width="1254" height="1254" loading="lazy">
     </div>
     <div class="product-grid">
       <div class="product-card card reveal">
@@ -720,7 +610,7 @@ footer .logo{font-size:22px}
   <div class="wrap">
     <div class="gift-banner reveal">
       <div class="gift-banner-photo">
-        <img src="assets/hands-unboxing.jpg" alt="Распаковка коробки ohmoybox" width="1024" height="1280" loading="lazy">
+        <img src="assets/gift-hands-opening.jpg" alt="Распаковка коробки ohmoybox" width="1024" height="1280" loading="lazy">
       </div>
       <div class="gift-banner-content">
         <div class="gift-icon">🎁</div>
@@ -1073,98 +963,6 @@ footer .logo{font-size:22px}
   })();
 
   /* =========================================================
-     QUIZ CONTROLLER
-  ========================================================== */
-  (function initQuiz(){
-    var steps = Array.prototype.slice.call(document.querySelectorAll('.quiz-step'));
-    var progressWrap = document.getElementById('quizProgress');
-    var chipsWrap = document.getElementById('quizChips');
-    var doneFilled = document.getElementById('quizDoneFilled');
-    var current = 0;
-    var answers = {};
-    var PRODUCT_NAMES = ['Сыворотка','Флакон с помпой','Крем в баночке','Туба','Помада'];
-
-    steps.forEach(function(_,i){
-      var dot = document.createElement('div');
-      dot.className = 'quiz-dot' + (i===0 ? ' active' : '');
-      progressWrap.appendChild(dot);
-    });
-    var dots = Array.prototype.slice.call(progressWrap.children);
-
-    function updateDots(){
-      dots.forEach(function(d,i){
-        d.classList.toggle('active', i===current);
-        d.classList.toggle('done', i < current || i < Object.keys(answers).length);
-      });
-    }
-
-    function renderChips(){
-      chipsWrap.innerHTML = '';
-      Object.keys(answers).sort(function(a,b){return a-b}).forEach(function(idx){
-        var chip = document.createElement('span');
-        chip.className = 'quiz-chip';
-        chip.innerHTML = '<span>' + PRODUCT_NAMES[idx] + '</span>';
-        var x = document.createElement('button');
-        x.textContent = '✕';
-        x.addEventListener('click', function(){
-          delete answers[idx];
-          renderChips();
-          goToStep(parseInt(idx,10));
-          doneFilled.classList.remove('show');
-          steps[parseInt(idx,10)].classList.add('active');
-          current = parseInt(idx,10);
-          updateDots();
-        });
-        chip.appendChild(x);
-        chipsWrap.appendChild(chip);
-      });
-    }
-
-    function goToStep(i){
-      steps.forEach(function(s,si){ s.classList.toggle('active', si===i); });
-    }
-
-    steps.forEach(function(step, idx){
-      step.querySelectorAll('.quiz-option').forEach(function(opt){
-        opt.addEventListener('click', function(){
-          step.querySelectorAll('.quiz-option').forEach(function(o){ o.classList.remove('picked'); });
-          opt.classList.add('picked');
-          answers[idx] = opt.getAttribute('data-answer');
-          renderChips();
-
-          setTimeout(function(){
-            if(idx < steps.length-1){
-              current = idx+1;
-              goToStep(current);
-              updateDots();
-            } else {
-              goToStep(-1);
-              doneFilled.classList.add('show');
-              updateDots();
-            }
-          }, 380);
-        });
-      });
-    });
-
-    document.getElementById('resetBoxBtn').addEventListener('click', function(){
-      answers = {};
-      renderChips();
-      doneFilled.classList.remove('show');
-      current = 0;
-      goToStep(0);
-      steps.forEach(function(s){ s.querySelectorAll('.quiz-option').forEach(function(o){o.classList.remove('picked');}); });
-      updateDots();
-    });
-
-    document.getElementById('goCheckoutBtn').addEventListener('click', function(){
-      selectTariff('sub');
-    });
-
-    updateDots();
-  })();
-
-  /* =========================================================
      PRICING -> CHECKOUT tariff sync
   ========================================================== */
   var tariffMap = {one:'one', sub:'sub', gift:'gift'};
@@ -1231,7 +1029,7 @@ footer .logo{font-size:22px}
   })();
 
   /* =========================================================
-     ORDER STATUS — pixel courier (packing / transit w/ obstacle / delivered+fireworks)
+     ORDER STATUS — pixel courier (packing / transit w/ obstacle / delivered+hearts+fireworks)
   ========================================================== */
   (function initPixelAnim(){
     var section = document.getElementById('order');
@@ -1243,74 +1041,107 @@ footer .logo{font-size:22px}
     canvas.width = W; canvas.height = H;
 
     var PAL = {
-      bg:'#2a0810', road:'#1c0409', wall:'#4a0f18', shelf:'#6E1624',
-      skin:'#E7B7BA', hairA:'#6E1624', hairB:'#3A2126',
+      skyTop:'#190509', skyLow:'#692018', road:'#190509', roadLine:'rgba(249,230,230,.14)',
+      wall:'#4a0f18', roof:'#7a1a1f', shelf:'#6E1624', doorColor:'#3a1410', window:'#F3D27A',
+      skin:'#E7B7BA', hairA:'#3A2126', hairB:'#2A1216',
       dress:'#D1455A', apron:'#F3C6C6', coat:'#8B1E2D', coatDark:'#6E1624',
-      box:'#F3C6C6', boxLine:'#8B1E2D', boxBody:'#8B1E2D',
-      star:'#F8E2E2', door:'#6E1624', crate:'#6E1624', crateLine:'#3A2126',
-      cloud:'#5c1a28', ground:'#1c0409', sky:'#8FD3EA'
+      box:'#F3C6C6', boxLid:'#B9CBDE', boxLine:'#8B1E2D',
+      star:'#F6E7D8', starGold:'#E7C27A', starBlue:'#9FC2DB',
+      moon:'#F3E7D2', crate:'#6E1624', crateLine:'#3A1216',
+      mailbox:'#C23B4A', heart1:'#E2566B', heart2:'#6F93B4'
     };
 
     function px(x,y,w,h,color){ ctx.fillStyle = color; ctx.fillRect(Math.round(x),Math.round(y),Math.max(1,w),Math.max(1,h)); }
 
-    /* generic blocky character: head + hair + torso + legs, with pose offsets */
-    function drawChar(x,y,opts){
+    /* rounded 3-band blob — cheap way to get an oval silhouette at this resolution */
+    function blob(cx,topY,w,h,color){
+      var topW = Math.max(1,Math.round(w*0.6)), midW = w, botW = Math.max(1,Math.round(w*0.8));
+      px(cx-topW/2, topY, topW, Math.max(1,Math.round(h*0.25)), color);
+      px(cx-midW/2, topY+Math.round(h*0.25), midW, Math.max(1,Math.round(h*0.5)), color);
+      px(cx-botW/2, topY+Math.round(h*0.75), botW, Math.max(1,Math.round(h*0.25)), color);
+    }
+
+    var STAR_FIELD = (function(){
+      var arr = [];
+      for(var i=0;i<22;i++){
+        arr.push({x:(i*37+11)%W, y:(i*23+5)%46, c:(i%6===0?PAL.starGold:(i%7===0?PAL.starBlue:PAL.star)), s:(i%4===0?2:1)});
+      }
+      return arr;
+    })();
+
+    function drawSky(){
+      var g = ctx.createLinearGradient(0,0,0,H-16);
+      g.addColorStop(0, PAL.skyTop);
+      g.addColorStop(1, PAL.skyLow);
+      ctx.fillStyle = g;
+      ctx.fillRect(0,0,W,H-16);
+      STAR_FIELD.forEach(function(s){ px(s.x,s.y,s.s,s.s,s.c); });
+      px(16,12,11,11,PAL.moon);
+      px(16,11,3,1,PAL.moon); px(24,11,3,1,PAL.moon);
+      px(15,14,1,7,PAL.moon); px(27,14,1,7,PAL.moon);
+    }
+
+    function drawRoad(){
+      px(0,H-16,W,16,PAL.road);
+      for(var i=0;i<W;i+=10){ px(i,H-16,5,1,PAL.roadLine); }
+    }
+
+    function drawMailbox(x){
+      px(x,H-30,2,16,PAL.coatDark);
+      blob(x+1,H-38,8,10,PAL.mailbox);
+      px(x+4,H-35,3,2,PAL.boxLid);
+    }
+
+    function drawHouse(x){
+      px(x,H-54,52,38,PAL.wall);
+      for(var i=0;i<28;i+=4){ px(x+i,H-54-Math.min(i,16),4,Math.min(i,16)+2,PAL.roof); }
+      px(x+34,H-30,12,14,PAL.doorColor);
+      px(x+8,H-38,9,9,PAL.window);
+    }
+
+    /* rounded-blob person: cap/hair + head + torso + limb nubs */
+    function drawPerson(x,y,opts){
       opts = opts || {};
-      var skin = opts.skin || PAL.skin;
-      var hair = opts.hair || PAL.hairA;
-      var body = opts.body || PAL.dress;
-      var legOff = opts.legOff || 0;
-      var armUp = opts.armUp || 0;
-      /* legs */
-      px(x, y-8+legOff, 3, 8, body);
-      px(x+5, y-8-legOff, 3, 8, body);
-      /* torso */
-      px(x-1, y-20, 10, 13, body);
-      /* arms */
-      px(x-3, y-20-armUp, 3, 9, skin);
-      px(x+8, y-20-armUp*0.6, 3, 9, skin);
-      /* head */
-      px(x, y-29, 8, 9, skin);
-      /* hair */
-      px(x-1, y-32, 10, 5, hair);
-      px(x-1, y-30, 2, 4, hair);
-      px(x+7, y-30, 2, 4, hair);
+      var skin = opts.skin || PAL.skin, hair = opts.hair || PAL.hairA, body = opts.body || PAL.dress;
+      var legOff = opts.legOff||0, armUp = opts.armUp||0, bowColor = opts.bow;
+      px(x-3, y-6+legOff, 3,6, PAL.coatDark);
+      px(x+1, y-6-legOff, 3,6, PAL.coatDark);
+      blob(x-0.5, y-20, 12, 13, body);
+      px(x-5, y-19-armUp, 3,8, skin);
+      px(x+6, y-19-armUp*0.6, 3,8, skin);
+      blob(x-0.5, y-31, 10, 10, skin);
+      blob(x-0.5, y-34, 11, 6, hair);
+      if(bowColor){
+        px(x-7, y-37, 3,3, bowColor);
+        px(x+3, y-37, 3,3, bowColor);
+        px(x-5.5, y-35, 2,2, bowColor);
+      }
+      return {headX:x-0.5, headY:y-34};
     }
 
     function drawPackerScene(t){
-      px(0,0,W,H,PAL.bg);
-      px(0,H-30,W,30,PAL.road);
-      px(8,20,54,42,PAL.wall);
-      px(14,26,14,10,PAL.shelf);
-      px(32,26,14,10,PAL.shelf);
-      px(14,40,32,6,PAL.shelf);
+      drawSky(); drawRoad();
+      px(8,H-54,54,38,PAL.wall);
+      px(14,H-48,14,10,PAL.shelf);
+      px(32,H-48,14,10,PAL.shelf);
+      px(14,H-34,32,6,PAL.shelf);
       var tapeWiggle = Math.sin(t*10)*2;
-      var tableX = 70, tableY = H-34;
+      var tableX = 70, tableY = H-18;
       px(tableX,tableY,46,4,PAL.coatDark);
       px(tableX+4,tableY+4,38,2,PAL.coatDark);
-      drawBoxItem(tableX+10,tableY-14,0.4+Math.max(0,Math.sin(t*6))*0.1);
-      drawChar(tableX+32,tableY, {skin:PAL.skin,hair:PAL.hairB,body:PAL.apron,armUp:4+tapeWiggle});
+      drawBoxItem(tableX+10,tableY-16,0.42+Math.max(0,Math.sin(t*6))*0.1);
+      drawPerson(tableX+32,tableY, {skin:PAL.skin,hair:PAL.hairB,body:PAL.apron,armUp:4+tapeWiggle});
       px(tableX+28,tableY-26+tapeWiggle,4,3,PAL.coat);
-      for(var i=0;i<10;i++){
-        var sx=(i*41+7)%W, sy=(i*13)%16+4;
-        if((i*5)%3===0) px(sx,sy,1,1,PAL.star);
-      }
     }
 
     function drawTransitScene(t){
-      px(0,0,W,H,PAL.bg);
-      px(0,14,W,8,PAL.cloud);
-      px(20,12,10,6,PAL.cloud);
-      px(100,10,14,6,PAL.cloud);
-      px(0,H-18,W,18,PAL.road);
-      px(0,H-20,W,2,PAL.coatDark);
-
+      drawSky(); drawRoad();
       var span = W-40;
       var courierX = 14 + span*t;
       var obstacleX = 14 + span*0.55;
-      px(obstacleX,H-30,12,12,PAL.crate);
-      px(obstacleX+2,H-27,8,2,PAL.crateLine);
-      px(obstacleX+2,H-22,8,2,PAL.crateLine);
+      px(obstacleX,H-28,12,12,PAL.crate);
+      px(obstacleX+2,H-25,8,2,PAL.crateLine);
+      px(obstacleX+2,H-20,8,2,PAL.crateLine);
 
       var jumpY = 0;
       var distToObstacle = courierX - obstacleX;
@@ -1319,68 +1150,87 @@ footer .logo{font-size:22px}
         jumpY = Math.sin(local*Math.PI) * 15;
       }
       var run = Math.sin(t*28);
-      drawChar(courierX, H-18-jumpY, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, legOff: run*3, armUp: 2});
-      drawBoxItem(courierX-3, H-44-jumpY, 0.42);
-
-      for(var i=0;i<6;i++){
-        var cx = (courierX + i*26) % (W+20) - 10;
-        px(cx, H-24, 1, 1, PAL.star);
-      }
+      drawPerson(courierX, H-16-jumpY, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, legOff: run*3, armUp: 2});
+      drawBoxItem(courierX-3, H-42-jumpY, 0.42);
     }
 
     function drawDoorArrival(t){
-      px(0,0,W,H,PAL.bg);
-      px(0,H-24,W,24,PAL.road);
-      px(W-50,16,40,52,PAL.wall);
-      px(W-40,H-30,10,14,PAL.door);
-      px(W-30,H-24,6,6,'#F8E2E2');
+      drawSky(); drawRoad();
+      drawMailbox(6);
+      drawHouse(W-56);
       var bob = Math.sin(t*6)*1.5;
-      drawChar(W-66, H-24, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, armUp:3});
-      drawBoxItem(W-70, H-50+bob, 0.42);
-      drawChar(W-28, H-24, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress});
-      for(var i=0;i<10;i++){
-        var sx=(i*41+7)%W, sy=(i*13)%16+4;
-        if((i*5)%3===0) px(sx,sy,1,1,PAL.star);
-      }
+      drawPerson(W-62, H-16, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat, armUp:3});
+      drawBoxItem(W-66, H-42+bob, 0.42);
+      drawPerson(W-26, H-16, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress, bow:PAL.heart2});
     }
 
     var fireworks = [];
+    var trails = [];
     function spawnFirework(cx,cy){
-      var colors = [PAL.dress, PAL.coat, PAL.box, PAL.star, PAL.sky, '#F8E2E2'];
-      var n = 10;
+      var colors = [PAL.dress, PAL.coat, PAL.boxLid, PAL.star, PAL.starBlue, PAL.starGold];
+      var n = 12;
       for(var i=0;i<n;i++){
         var a = (i/n)*Math.PI*2;
-        fireworks.push({x:cx,y:cy,vx:Math.cos(a)*1.4,vy:Math.sin(a)*1.4,life:1,color:colors[i%colors.length]});
+        fireworks.push({x:cx,y:cy,vx:Math.cos(a)*1.3,vy:Math.sin(a)*1.3,life:1,color:colors[i%colors.length]});
+      }
+      for(var j=0;j<5;j++){
+        trails.push({x:cx-10-j*6,y:cy+16+j*7,life:1,color: j%2? PAL.starBlue : PAL.starGold});
       }
     }
-    var lastBurst = 0;
-    function drawDeliveredScene(t){
-      px(0,0,W,H,PAL.bg);
-      px(0,H-24,W,24,PAL.road);
-      px(W-50,16,40,52,PAL.wall);
-      px(W-40,H-30,10,14,'#2a0810');
-      drawChar(W-66, H-24, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat});
-      drawChar(W-28, H-24, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress, armUp:5});
-      drawBoxItem(W-36, H-46, 0.42);
+    var hearts = [];
+    function spawnHeart(cx,cy){
+      hearts.push({x:cx+(Math.random()*6-3),y:cy,vy:-0.55-Math.random()*0.2,phase:Math.random()*6.28,life:1,color: Math.random()<0.35?PAL.heart2:PAL.heart1});
+    }
+    function drawHeartShape(x,y,color,alpha){
+      ctx.globalAlpha = Math.max(0,alpha);
+      px(x-2,y-2,2,2,color); px(x+0.2,y-2,2,2,color);
+      px(x-2,y,4.2,2,color);
+      px(x-1,y+2,2.2,1,color);
+      ctx.globalAlpha = 1;
+    }
 
-      if(t - lastBurst > 0.55){
+    var lastBurst = 0, lastHeart = 0;
+    function drawDeliveredScene(t){
+      drawSky(); drawRoad();
+      drawMailbox(6);
+      drawHouse(W-56);
+      drawPerson(W-62, H-16, {skin:PAL.skin, hair:PAL.hairB, body:PAL.coat});
+      var recipient = drawPerson(W-26, H-16, {skin:PAL.skin, hair:PAL.hairA, body:PAL.dress, armUp:5, bow:PAL.heart2});
+      drawBoxItem(W-32, H-38, 0.42);
+
+      if(t - lastBurst > 0.5){
         lastBurst = t;
-        var spots = [[40,30],[90,22],[65,45]];
+        var spots = [[40,26],[96,20],[62,36],[112,32]];
         var spot = spots[Math.floor(Math.random()*spots.length)];
         spawnFirework(spot[0], spot[1]);
       }
+      if(t - lastHeart > 0.4){
+        lastHeart = t;
+        spawnHeart(W-30, H-42);
+      }
+
+      trails.forEach(function(p){ p.life -= 0.06; if(p.life>0) px(p.x,p.y,1,1,p.color); });
+      trails = trails.filter(function(p){ return p.life>0; });
+
       fireworks.forEach(function(p){
-        p.x += p.vx; p.y += p.vy; p.vy += 0.03; p.life -= 0.025;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.03; p.life -= 0.022;
         if(p.life > 0) px(p.x, p.y, 1.5, 1.5, p.color);
       });
       fireworks = fireworks.filter(function(p){ return p.life > 0; });
+
+      hearts.forEach(function(h){
+        h.y += h.vy; h.phase += 0.12; h.life -= 0.012;
+        var wob = Math.sin(h.phase)*2.2;
+        if(h.life > 0) drawHeartShape(h.x+wob, h.y, h.color, Math.min(1,h.life*1.3));
+      });
+      hearts = hearts.filter(function(h){ return h.life > 0; });
     }
 
     function drawBoxItem(x,y,scale){
       scale = scale || 1;
       var w = 16*scale, h = 11*scale;
-      px(x,y,w,h,PAL.box);
-      px(x,y+h*0.45,w,1,PAL.boxLine);
+      px(x,y,w,h*0.55,PAL.boxLid);
+      px(x,y+h*0.55,w,h*0.45,PAL.box);
       px(x+w*0.45,y,1,h,PAL.boxLine);
     }
 
