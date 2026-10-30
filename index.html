@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ohmoybox — бьюти-подписка, которую ждёшь весь месяц</title>
-<meta name="description" content="Коробка на 6 000+ ₽ за 2 690 ₽: пять продуктов видно сразу, шестой остаётся сюрпризом. Собери свою коробку за 5 вопросов и оформи подписку ohmoybox.">
+<meta name="description" content="Коробка на 6 000+ ₽ за 2 690 ₽: пять продуктов видно сразу, шестой остаётся сюрпризом. Сертифицированные бренды, собранные с заботой. Оформи подписку ohmoybox.">
 <link rel="canonical" href="https://ohmoybox.ru/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -24,6 +24,7 @@
   --coral:#D1455A;
   --porcelain:#FFF6F6;
   --cream:#F8E2E2;
+  --powder:#E3ECF4;
   --blush:#F3C6C6;
   --skin:#E7B7BA;
   --sky:#B9CBDE;
@@ -53,6 +54,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @media (max-width:980px){.section{padding:72px 0}}
 @media (max-width:640px){.section{padding:56px 0}}
 .bg-cream{background:var(--cream)}
+.bg-powder{background:var(--powder)}
 .bg-porcelain{background:var(--porcelain)}
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
@@ -74,8 +76,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 }
 .btn-primary{background:var(--maroon);color:#fff;box-shadow:var(--shadow)}
 .btn-primary:hover{background:var(--bordeaux);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--maroon);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--maroon);background:#fff}
+.btn-ghost{background:transparent;color:var(--sky-dark);border:1.5px solid rgba(73,112,155,.4)}
+.btn-ghost:hover{border-color:var(--sky-dark);background:#EAF3F8}
 .btn[disabled]{opacity:.5;cursor:not-allowed;pointer-events:none}
 .card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--line)}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
@@ -129,7 +131,7 @@ header.scrolled .burger span{background:var(--ink)}
 .story-text h1 .accent{color:var(--coral);font-style:italic;text-shadow:0 0 30px rgba(209,69,90,.85);filter:brightness(1.35) saturate(1.1)}
 .story-text p{color:rgba(255,246,246,.85);font-size:17px;line-height:1.65;max-width:480px}
 .story-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:30px}
-.story-text .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+.story-text .btn-ghost{color:#fff;border-color:rgba(185,203,222,.6)}
 .story-text .btn-ghost:hover{background:rgba(185,203,222,.22);border-color:var(--sky)}
 .story-badge{display:inline-flex;align-items:center;gap:7px;background:var(--sky);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;color:var(--bordeaux);margin-top:30px;box-shadow:0 10px 24px -10px rgba(73,112,155,.5)}
 .story-progress{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:4}
@@ -195,7 +197,6 @@ header.scrolled .burger span{background:var(--ink)}
 .plan.giftplan{border:2px solid var(--sky-dark)}
 .plan-badge{position:absolute;top:-14px;left:30px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;letter-spacing:.04em}
 .plan-badge.sky{background:var(--sky-dark)}
-.plan.giftplan .plan-btn{border-color:var(--sky-dark);color:var(--sky-dark)}
 .plan.giftplan .plan-btn:hover{background:var(--sky-dark);color:#fff;border-color:var(--sky-dark)}
 .plan-name{font-family:'Unbounded',sans-serif;font-size:21px;margin-bottom:6px}
 .plan-tag{color:var(--muted);font-size:14px;margin-bottom:20px}
@@ -416,7 +417,7 @@ footer .logo{font-size:22px}
   </div>
 </section>
 
-<section class="section bg-cream" id="brands">
+<section class="section bg-powder" id="brands">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Внутри коробки</span>
@@ -462,7 +463,7 @@ footer .logo{font-size:22px}
     <div class="benefits-grid">
       <div class="benefit-card reveal">
         <div class="benefit-num">1</div>
-        <div><h3>Подбираем под тебя</h3><p>Пара вопросов о коже, вкусах и формате — и коробка собирается персонально, без случайного набора.</p></div>
+        <div><h3>Подбираем под тебя</h3><p>Тщательно отбираем бренды и продукты — проверяем сертификацию и состав, чтобы в коробке было только то, что действительно стоит внимания.</p></div>
       </div>
       <div class="benefit-card reveal">
         <div class="benefit-num">2</div>
@@ -488,8 +489,8 @@ footer .logo{font-size:22px}
     <div class="how-grid">
       <div class="how-step reveal">
         <div class="num">01</div>
-        <h3>Расскажи о себе</h3>
-        <p>Пара вопросов о коже, ароматах и формате — и мы знаем, что тебе понравится.</p>
+        <h3>Оформляешь подписку</h3>
+        <p>Выбираешь формат, который подходит, и оформляешь заказ в пару кликов — без лишних вопросов.</p>
       </div>
       <div class="how-step reveal">
         <div class="num">02</div>
@@ -519,7 +520,7 @@ footer .logo{font-size:22px}
         <ul class="plan-features">
           <li>Одна коробка, один раз</li>
           <li>Косметика на 6 000+ ₽ внутри</li>
-          <li>Состав под твои ответы</li>
+          <li>Состав подобран для тебя</li>
           <li>Бесплатная доставка</li>
           <li>Без продления</li>
         </ul>
@@ -560,7 +561,7 @@ footer .logo{font-size:22px}
 <section class="section bg-porcelain" id="inside">
   <div class="wrap">
     <div class="section-head center reveal" style="margin:0 auto 48px">
-      <span class="eyebrow">Внутри коробки</span>
+      <span class="eyebrow sky">Внутри коробки</span>
       <h2>Что внутри твоей коробки</h2>
       <p class="lead">Косметика на 6 000+ ₽ за 2 690 ₽. Пять продуктов видно сразу, шестой остаётся сюрпризом — узнаешь, когда коробка окажется у тебя.</p>
     </div>
@@ -606,7 +607,7 @@ footer .logo{font-size:22px}
   </div>
 </section>
 
-<section class="section bg-cream" id="gift">
+<section class="section bg-powder" id="gift">
   <div class="wrap">
     <div class="gift-banner reveal">
       <div class="gift-banner-photo">
@@ -648,10 +649,10 @@ footer .logo{font-size:22px}
   </div>
 </section>
 
-<section class="section bg-cream" id="checkout">
+<section class="section bg-powder" id="checkout">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Оформление</span>
+      <span class="eyebrow sky">Оформление</span>
       <h2>Твоя коробка почти готова</h2>
       <p class="lead">Заполни данные — и первая коробка отправится к тебе.</p>
     </div>
@@ -747,7 +748,7 @@ footer .logo{font-size:22px}
     <div class="accordion reveal" id="accordion">
       <div class="accordion-item">
         <div class="accordion-q"><span>Как формируется состав коробки?</span><span class="plus">+</span></div>
-        <div class="accordion-a"><p>Ты отвечаешь на вопросы о типе кожи, любимых ароматах и формате (уход или макияж). По этим ответам мы подбираем средства так, чтобы коробка была именно про тебя.</p></div>
+        <div class="accordion-a"><p>Мы тщательно отбираем косметические бренды — смотрим на сертификацию, состав и качество каждого продукта, прежде чем он попадёт в коробку. Собираем с заботой и любовью, чтобы каждая коробка приносила только хорошее настроение.</p></div>
       </div>
       <div class="accordion-item">
         <div class="accordion-q"><span>Сколько стоит и что внутри?</span><span class="plus">+</span></div>
